@@ -50,8 +50,8 @@ Test Case \#2: open google.com on a default browser
 	and	Response should be equal to ${HTTPcode}
 	#Example of using loop in .robot & getting value from an external list
 	Then	FOR ${text} IN @{SAMPLE_EXTERNAL_VAR}
-				Type ${text} into a search box
-			END
+			Type ${text} into a search box
+		END
 
 Test case \#3: check a failure builtin
 	Set Tags	builtin-demo
