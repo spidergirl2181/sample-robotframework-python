@@ -4,7 +4,7 @@ class WindowsHelper():
 	#This class gets use of WinAppDriver (Windows SDK) via Appium server to automate actions on Windows 10+. See more at: https://github.com/microsoft/WinAppDriver
 
 	def __init__(self):
-		self.desired_caps = {}
+	self.desired_caps = {}
     	#self.desired_caps["app"] = ''
     	self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', desired_capabilities=desired_caps)
 
