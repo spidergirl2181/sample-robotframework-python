@@ -18,6 +18,6 @@ Response should be equal to ${HTTPcode}
     Verify HTTP response code ${HTTPcode}
 
 Type ${text} into a search box
-    Input ${text} into Google search box
+    Input into Google search box ${text} 
     Hit Enter
     Verify SERP is displayed
