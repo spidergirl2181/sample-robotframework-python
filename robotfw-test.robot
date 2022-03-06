@@ -67,15 +67,13 @@ Test case \#3: check a failure builtin
 
 #For the implementation of test case 1
 Open CMD or Terminal window
-    Open program from shell ${PRG_NAME}
-    Current process list on OS should have ${PRG_NAME} running
+	Open program from shell ${PRG_NAME}
 
 Type ECHO command on CMD on Terminal window with "${TEXT1} ${TEXT2}"
 	Input to commandline "${TEXT1} ${TEXT2}"
-	Press Enter
 
 Typed text should be displayed on CMD or Terminal window
-	Check result of commandline output
+	Check commandline output
 
 *** Comments ***
 This is just a demo usage of Robot Framework <end>. This line will be ignored.
