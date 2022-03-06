@@ -26,8 +26,8 @@ Default Tags	Demo
 
 *** Variables ***
 #This section is for local variables declaration 
-${TEXT1}	Hello
-${TEXT2}	World!
+${TEXT1}	echo
+${TEXT2}	Hello World!
 
 *** Test Cases ***
 Test Case \#1: ECHO command on CMD or Terminal
