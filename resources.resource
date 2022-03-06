@@ -8,11 +8,10 @@ ${BROWSER}  chrome.exe
 
 *** Keywords ***
 Default browser is opened
-    Open program from shell ${BROWSER}
-    Current process list on OS should have running ${BROWSER} 
+    Open default browser
 
 Open ${URL} on a browser
-    Open ${URL} on the browser
+    Access to URL ${URL}
 
 Response should be equal to ${HTTPcode}
     Verify HTTP response code ${HTTPcode}
@@ -20,4 +19,4 @@ Response should be equal to ${HTTPcode}
 Type ${text} into a search box
     Input into Google search box ${text} 
     Hit Enter
-    Verify SERP is displayed
+    Verify Google SERP is displayed
