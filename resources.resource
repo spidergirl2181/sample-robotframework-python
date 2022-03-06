@@ -9,7 +9,7 @@ ${BROWSER}  chrome.exe
 *** Keywords ***
 Default browser is opened
     Open program from shell ${BROWSER}
-    Current process list on OS should have ${BROWSER} running
+    Current process list on OS should have running ${BROWSER} 
 
 Open ${URL} on a browser
     Open ${URL} on the browser
