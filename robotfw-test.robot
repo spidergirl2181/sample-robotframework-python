@@ -38,8 +38,6 @@ Test Case \#1: ECHO command on CMD or Terminal
 	[Timeout]	${Timeout}
 	#Example of keyword having more than one argument. the value of scalar argument is by default converted to string
 	Type ECHO command on CMD on Terminal window with "${TEXT1} ${TEXT2}"	
-	Typed text should be displayed on CMD or Terminal window
-
 
 Test Case \#2: open google.com on a default browser
 	#Example of using Free Named Argument (no pre-defined argument number OR kwargs)
@@ -71,9 +69,6 @@ Open CMD or Terminal window
 
 Type ECHO command on CMD on Terminal window with "${TEXT1} ${TEXT2}"
 	Input to commandline "${TEXT1} ${TEXT2}"
-
-Typed text should be displayed on CMD or Terminal window
-	Check commandline output
 
 *** Comments ***
 This is just a demo usage of Robot Framework <end>. This line will be ignored.
