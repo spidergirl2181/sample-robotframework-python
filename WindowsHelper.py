@@ -1,7 +1,9 @@
 from appium import webdriver
+import subprocess
 
 class WindowsHelper():
 	#This class gets use of WinAppDriver (Windows SDK) via Appium server to automate actions on Windows 10+. See more at: https://github.com/microsoft/WinAppDriver
+	#Beautiful code & well-structure test library are not its focus.
 
 	def __init__(self):
 		self.desired_caps = {}
@@ -18,3 +20,7 @@ class WindowsHelper():
 		cmd_text_area = self.driver.find_element_by_name("Text Area")
 		cmd_text_area.send_keys(string)
 		cmd_text_area..send_keys('\ue007') #Press enter
+	
+	def check_default_browser(self):
+		default_browser = subprocess.getoutput(r'reg query "HKCU\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http" -v Progid -s')
+		print(default_browser)
