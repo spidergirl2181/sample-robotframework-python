@@ -10,8 +10,8 @@ Documentation	This is just a demo usage of Robot Framework <start>.
 ...				To check the .robot implementation without integrating with other sources or libs, use "--dryrun" mode specified in Robot FW.
 
 #Library to import user-defined keywords, low-level libraries , user-defined libs. Arguments will be processed at run time.
-Library		WindowsHelper	${PRG_NAME}	${TEXT1} ${TEXT2}
-Library		BrowserHelper	${BROWSER}	${URL}	${HTTPcode}	${text}		
+Library		WindowsHelper.py	${PRG_NAME}	${TEXT1}	${TEXT2}
+Library		BrowserHelper.py	${BROWSER}	${URL}	${HTTPcode}	${text}		
 
 Resource	resources.resource		#file extension .robot is acceptable. To import user-defined keywords
 
@@ -41,15 +41,14 @@ Test Case \#1: ECHO command on CMD or Terminal
 
 Test Case \#2: open google.com on a default browser
 	#Example of using Free Named Argument (no pre-defined argument number OR kwargs)
-	[Documentation] Test if using Selenium can open an URL on a default web browser
-	Given	Default browser is opened
+	[Documentation] Test if using Selenium can open an URL on a web browser
+	Given	Access to url	${URL}
 	[Timeout]	${Timeout} #Value from setting section
-	When	${HTTPcode} = Open ${URL} on a browser
-	and	Response should be equal to ${HTTPcode}
 	#Example of using loop in .robot & getting value from an external list
-	Then	FOR ${text} IN @{SAMPLE_EXTERNAL_VAR}
-			Type ${text} into a search box
+	When	FOR ${text} IN @{SAMPLE_EXTERNAL_VAR}
+			Input to google textbox ${text}
 		END
+	Then	Verify google serp display
 
 Test case \#3: check a failure builtin
 	Set Tags	builtin-demo
