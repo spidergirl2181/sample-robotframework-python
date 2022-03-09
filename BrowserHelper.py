@@ -34,8 +34,8 @@ class BrowserHelper(object):
 
 	def verify_google_serp_display(self):
 		serp = self.ChromeDriver.find_element(By.ID, "search")
-        if (serp is not None):
-            return True
+        	if (serp is not None):
+            		return True
 
 
 
