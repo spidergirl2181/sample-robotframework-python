@@ -25,12 +25,12 @@ class BrowserHelper(object):
 
 	def input_to_google_textbox(self, keyword):
 		try:
-            search_box = self.ChromeDriver.find_element(By.CLASS_NAME, "gLFyf gsfi")
-            search_box.send_keys(keyword)
-            search_box.send_keys(Keys.ENTER)
-            WebDriverWait(self.ChromeDriver, self.implicit_wait)
-        except:
-            print("Search on Google SE can not be performed")  
+            		search_box = self.ChromeDriver.find_element(By.CLASS_NAME, "gLFyf gsfi")
+            		search_box.send_keys(keyword)
+            		search_box.send_keys(Keys.ENTER)
+            		WebDriverWait(self.ChromeDriver, self.implicit_wait)
+        	except:
+            		print("Search on Google SE can not be performed")  
 
 	def verify_google_serp_display(self):
 		serp = self.ChromeDriver.find_element(By.ID, "search")
